@@ -1,0 +1,14 @@
+{
+  "domain": "kidswatch_tracker",
+  "name": "Kids Watch Tracker",
+  "codeowners": ["@kasitoru"],
+  "version": "1.0.0",
+  "documentation": "https://github.com/kasitoru/kidswatch_tracker",
+  "issue_tracker": "https://github.com/kasitoru/kidswatch_tracker/issues",
+  "requirements": ["cryptography>=41.0.0"],
+  "integration_type": "hub",
+  "iot_class": "cloud_polling",
+  "config_flow": true,
+  "dependencies": ["device_tracker"],
+  "after_dependencies": []
+}

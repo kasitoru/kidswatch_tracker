@@ -1,0 +1,7 @@
+{
+  "name": "Kids Watch Tracker",
+  "homeassistant": "2022.8.0",
+  "render_readme": true,
+  "domains": ["device_tracker"],
+  "iot_class": "cloud_polling"
+}
