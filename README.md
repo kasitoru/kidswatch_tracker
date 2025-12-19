@@ -24,7 +24,7 @@ Integration for tracking Kids Watch devices (such as HONOR Choice Kids Watch) in
 ### Method 2: Manual Installation
 
 1. Download the [archive](https://github.com/kasitoru/kidswatch_tracker/archive/refs/heads/main.zip) with the latest version of the integration
-2. Copy the `kidswatch_tracker` folder to your `custom_components` directory
+2. Copy the `custom_components` folder to your `homeassistant` directory
 3. Restart Home Assistant
 
 ## Configuration
