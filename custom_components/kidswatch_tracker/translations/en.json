@@ -11,10 +11,24 @@
           "update_interval": "Update interval (seconds)",
           "force_update": "Force update location"
         }
+      },
+      "reauth_confirm": {
+        "title": "Re-authenticate Kids Watch",
+        "description": "The session for account {account} has expired. Enter the password again.",
+        "data": {
+          "password": "Password"
+        }
       }
     },
+    "error": {
+      "cannot_connect": "Failed to connect: {error}",
+      "auth_failed": "Failed to sign in: {error}",
+      "unknown": "Unexpected error, see the log for details"
+    },
     "abort": {
-      "already_configured": "This account is already configured"
+      "already_configured": "This account is already configured",
+      "reauth_successful": "Re-authentication was successful",
+      "wrong_account": "The credentials belong to a different account"
     }
   },
   "options": {
@@ -29,8 +43,23 @@
       }
     }
   },
+  "entity": {
+    "sensor": {
+      "battery": {
+        "name": "Battery"
+      },
+      "locate_time": {
+        "name": "Last location update"
+      }
+    },
+    "binary_sensor": {
+      "charging": {
+        "name": "Charging"
+      }
+    }
+  },
   "selector": {
-    "country_codes" : {
+    "country_codes": {
       "options": {
         "1_canada": "+1 (Canada)",
         "1_united_states": "+1 (United States)",
@@ -49,7 +78,7 @@
         "1671_guam": "+1671 (Guam)",
         "1684_american_samoa": "+1684 (American Samoa)",
         "1758_saint_lucia": "+1758 (Saint Lucia)",
-        "1767_dominique": "+1767 (Dominique)",
+        "1767_dominique": "+1767 (Dominica)",
         "1784_saint_vincent_and_the_grenadines": "+1784 (Saint Vincent and the Grenadines)",
         "1787_puerto_rico": "+1787 (Puerto Rico)",
         "1809_dominican_republic": "+1809 (Dominican Republic)",
@@ -66,7 +95,6 @@
         "221_senegal": "+221 (Senegal)",
         "222_mauritania": "+222 (Mauritania)",
         "223_mali": "+223 (Mali)",
-        "223_san_marino": "+223 (San Marino)",
         "224_guinea": "+224 (Guinea)",
         "225_ivory_coast": "+225 (Ivory Coast)",
         "226_burkina_faso": "+226 (Burkina Faso)",

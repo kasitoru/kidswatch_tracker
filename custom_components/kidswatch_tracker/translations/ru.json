@@ -11,10 +11,24 @@
           "update_interval": "Интервал обновления (секунды)",
           "force_update": "Принудительный запрос местоположения"
         }
+      },
+      "reauth_confirm": {
+        "title": "Повторная авторизация Kids Watch",
+        "description": "Сессия аккаунта {account} истекла. Введите пароль заново.",
+        "data": {
+          "password": "Пароль"
+        }
       }
     },
+    "error": {
+      "cannot_connect": "Не удалось подключиться: {error}",
+      "auth_failed": "Не удалось войти: {error}",
+      "unknown": "Непредвиденная ошибка, подробности в журнале"
+    },
     "abort": {
-      "already_configured": "Эта учетная запись уже настроена"
+      "already_configured": "Эта учетная запись уже настроена",
+      "reauth_successful": "Повторная авторизация выполнена успешно",
+      "wrong_account": "Указанные данные принадлежат другому аккаунту"
     }
   },
   "options": {
@@ -29,8 +43,23 @@
       }
     }
   },
+  "entity": {
+    "sensor": {
+      "battery": {
+        "name": "Батарея"
+      },
+      "locate_time": {
+        "name": "Последнее обновление местоположения"
+      }
+    },
+    "binary_sensor": {
+      "charging": {
+        "name": "Зарядка"
+      }
+    }
+  },
   "selector": {
-    "country_codes" : {
+    "country_codes": {
       "options": {
         "1_canada": "+1 (Канада)",
         "1_united_states": "+1 (Соединенные Штаты)",
@@ -66,7 +95,6 @@
         "221_senegal": "+221 (Сенегал)",
         "222_mauritania": "+222 (Мавритания)",
         "223_mali": "+223 (Мали)",
-        "223_san_marino": "+223 (Сан-Марино)",
         "224_guinea": "+224 (Гвинея)",
         "225_ivory_coast": "+225 (Кот-д’Ивуар)",
         "226_burkina_faso": "+226 (Буркина-Фасо)",

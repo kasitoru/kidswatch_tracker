@@ -3,7 +3,7 @@
 DOMAIN = "kidswatch_tracker"
 DEFAULT_UPDATE_INTERVAL = 60
 DEFAULT_FORCE_UPDATE = False
-DEFAULT_SCAN_INTERVAL = 60
+MAX_CONSECUTIVE_ERRORS = 10
 
 COUNTRY_CODES = [
     ("+1", "1_canada"),
@@ -225,3 +225,5 @@ COUNTRY_CODES = [
     ("+996", "996_kyrgyzstan"),
     ("+998", "998_uzbekistan"),
 ]
+
+COUNTRY_CODE_BY_SLUG = {slug: code for code, slug in COUNTRY_CODES}
