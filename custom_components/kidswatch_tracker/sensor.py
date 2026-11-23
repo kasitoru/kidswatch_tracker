@@ -53,6 +53,11 @@ class KidsWatchBatterySensor(KidsWatchEntity, SensorEntity):
         """Return the battery level."""
         return self.device_data.get("battery")
 
+    @property
+    def available(self) -> bool:
+        """Return if the entity is available."""
+        return super().available and self.native_value is not None
+
 
 class KidsWatchLocateTimeSensor(KidsWatchEntity, SensorEntity):
     """Timestamp of the last location update reported by the cloud."""
@@ -70,3 +75,8 @@ class KidsWatchLocateTimeSensor(KidsWatchEntity, SensorEntity):
     def native_value(self) -> datetime | None:
         """Return the last location update time (UTC)."""
         return self.device_data.get("locate_time")
+
+    @property
+    def available(self) -> bool:
+        """Return if the entity is available."""
+        return super().available and self.native_value is not None

@@ -42,3 +42,8 @@ class KidsWatchChargingBinarySensor(KidsWatchEntity, BinarySensorEntity):
     def is_on(self) -> bool | None:
         """Return True if the watch is charging."""
         return self.device_data.get("charging")
+
+    @property
+    def available(self) -> bool:
+        """Return if the entity is available."""
+        return super().available and self.is_on is not None

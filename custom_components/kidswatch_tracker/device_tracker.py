@@ -35,6 +35,15 @@ class KidsWatchTrackerEntity(KidsWatchEntity, TrackerEntity):
         self._attr_unique_id = self.device_id
 
     @property
+    def available(self) -> bool:
+        """Return if the entity is available."""
+        return (
+            super().available
+            and self.latitude is not None
+            and self.longitude is not None
+        )
+
+    @property
     def latitude(self) -> float | None:
         """Return latitude value of the device."""
         return self.device_data.get("latitude")
